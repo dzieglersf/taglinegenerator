@@ -1,0 +1,48 @@
+"type","value","option"
+3,1,Low Price
+3,2,"Low, Low Price"
+3,3,Convenience
+3,4,Entertainment
+3,5,Increased Beauty
+3,6,Increased Smarts
+3,7,Better Mood
+3,8,Better Health
+3,9,"Nom, Nom, Nom"
+3,10,Increased Productivity
+3,11,Refreshment
+3,12,Sexy Times
+3,13,Impress Others
+2,1,Visit
+2,2,Date
+2,3,Download
+2,4,Drink
+2,5,Eat
+2,6,Enjoy
+2,7,Know About
+2,8,Follow on Social Media
+2,9,Purchase
+2,10,Share with Friends
+2,11,Use
+2,12,Wear
+1,1,Bar
+1,2,Beauty Product
+1,3,Professional Service
+1,4,Beverage
+1,5,Entertainment Product
+1,6,Apparel & Accessories
+1,7,High-Tech
+1,8,Travel Destination
+1,9,Creative Service
+1,10,Department Store
+1,11,Food Product
+1,12,Restaurant
+1,13,You
+1,14,Website
+1,15,Vehicle
+1,16,Toys or Sporting Goods
+1,17,Housewares
+1,18,Other
+4,1,Normal
+4,2,Urgent
+4,3,Very Urgent
+4,4,Emergency!
