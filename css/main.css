@@ -93,19 +93,73 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-img.background {
-    max-width: 100%;
+html, body
+{
+    height: 100%;
 }
 
+body
+{
+    background-image:url('../img/MoxyTR-bkgdwstripe.jpg');
+    background-size: cover;
+}
 
+.centered
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
 
+#title
+{
+    padding-top: 7%;
+    position: relative;
+}
 
+#robot
+{
+    position: relative;
+    z-index: 0;
+}
+#social
+{
+    margin-top: -70px;
+    position: absolute;
+    left: 70%;
+}
 
+div.question
+{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: 1;
+}
 
+div#category
+{
+    top: 560px;
+}
 
+div#cta{
+    top: 600px;
+}
 
+div#benefit {
+    top: 640px;
+}
 
+div#urgency {
+    top: 680px;
+    width: 200px;
+}
+
+select.centered
+{
+    width: 200px;
+}
 
 
 

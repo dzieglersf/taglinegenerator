@@ -14,10 +14,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/themes/alertify.core.css">
         <link rel="stylesheet" href="css/themes/alertify.default.css">
-
-        <script type="text/javascript" src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script type="text/javascript" src="js/vendor/underscore.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/jquery.share.css">
 
     </head>
     <body>
@@ -25,30 +22,30 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <img class="background" src="img/Moxy_TaglineGenerator.png"></img>
-
-        <iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/moxysf"
-            scrolling="no" frameborder="0"
-            style="border:none; width:450px; height:80px"></iframe>
-
-        <div id="category">        
-            <label>What are you promoting?</label>
-            <select><option value="0">Pick one!</option></select>
+        <img id="title" class="centered" src="img/MoxyTR-TaglineRobot.png" />
+        <div id="social">
+            <div><label>SHARE THIS PAGE</label></div>
+            <span id="socialbuttons"></span>
         </div>
 
-        <div id="cta">
-            <label>What action should they take?</label>
-            <select><option value="0">Pick one!</option></select>
+        <img id="robot" class="centered" src="img/MoxyTR-Robot-noscreennoarms.png" />
+        <label>Need a tagline or slogan?</label>
+        <label>The robot can assist you.</label>
+
+        <div id="category" class="question">
+            <select class="centered" ><option value="0">Pick one!</option></select>
+        </div>  
+        
+        <div id="cta" class="question" >
+            <select class="centered"><option value="0">Pick one!</option></select>
         </div>
 
-        <div id="benefit">
-            <label>Selling point?</label>
-            <select><option value="0">Pick one!</option></select>
+        <div id="benefit" class="question" >
+            <select class="centered"><option value="0">Pick one!</option></select>
         </div>
 
-        <div id="urgency">
-            <label>Urgency?</label>
-            <select><option value="0">Pick one!</option></select>
+        <div id="urgency" class="question" >
+            <select class="centered"><option value="0">Pick one!</option></select>
         </div>
 
         <div><button type="button" id="generateDesigned">Generate my tag line!</button></div>
@@ -56,15 +53,25 @@
 
         <div><label id="result">Here's my generated tagline!</label></div>
 
-put buttons here
+        
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="js/vendor/jquery.csv-0.71.min.js"></script>
-        <script src="js/vendor/alertify.min.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.csv-0.71.min.js"></script>
+        
+        <script type="text/javascript" src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript" src="js/vendor/alertify.min.js"></script>
+        <script type="text/javascript" src="js/vendor/underscore.js"></script> 
+        <script type="text/javascript" src="js/vendor/jquery.share.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
 
         <script>
+
+                $('#socialbuttons').share({
+                    networks: ['facebook','googleplus','twitter','linkedin'],
+                    theme: 'square'
+                });
+
             var _gaq=[['_setAccount','UA-35135751-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src='//www.google-analytics.com/ga.js';
