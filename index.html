@@ -28,32 +28,24 @@
             <span id="socialbuttons"></span>
         </div>
 
-        <img id="robot" class="centered" src="img/MoxyTR-Robot-noscreennoarms.png" />
-        <label>Need a tagline or slogan?</label>
-        <label>The robot can assist you.</label>
+        <div id="robot" class="centered">
+            <!-- <label>Need a tagline or slogan?</label>  -->
+            <img class="centered" src="img/MoxyTR-Robot-nobuttons.png" />
+            <!-- <label>The robot can assist you.</label> -->
 
-        <div id="category" class="question">
-            <select class="centered" ><option value="0">Pick one!</option></select>
-        </div>  
+            <select id="category" class="question"><option value="0">Pick one!</option></select>
+            <select id="cta" class="question"><option value="0">Pick one!</option></select>
+            <select id="benefit" class="question"><option value="0">Pick one!</option></select>
+            <select id="urgency" class="question"><option value="0">Pick one!</option></select>
+        <div>
         
-        <div id="cta" class="question" >
-            <select class="centered"><option value="0">Pick one!</option></select>
+        <div><img src="img/MoxyTR-button-blue.png" id="generateDesigned" alt="Generate my tag line!" /></div>
+        <div><img src="img/MoxyTR-button-purple.png" id="generateRandom" alt="Generate random tag line!" /></div>
+
+        <div class="tagline">
+            <img src="img/MoxyTR-box.png" />
+            <label id="result"></label>
         </div>
-
-        <div id="benefit" class="question" >
-            <select class="centered"><option value="0">Pick one!</option></select>
-        </div>
-
-        <div id="urgency" class="question" >
-            <select class="centered"><option value="0">Pick one!</option></select>
-        </div>
-
-        <div><button type="button" id="generateDesigned">Generate my tag line!</button></div>
-        <div><button type="button" id="generateRandom">Generate random tag line!</button></div>
-
-        <div><label id="result">Here's my generated tagline!</label></div>
-
-        
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>

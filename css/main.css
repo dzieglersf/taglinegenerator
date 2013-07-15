@@ -19,7 +19,8 @@ textarea {
 }
 
 body {
-    font-size: 1em;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.5em;
     line-height: 1.4;
 }
 
@@ -129,31 +130,29 @@ body
     left: 70%;
 }
 
-div.question
+select.question
 {
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 10%;
+    left: 44.5%;
     position: absolute;
     z-index: 1;
 }
 
-div#category
+select#category
 {
-    top: 560px;
+    top: 36%;
 }
 
-div#cta{
-    top: 600px;
+select#cta{
+    top: 44.5%;
 }
 
-div#benefit {
-    top: 640px;
+select#benefit {
+    top: 53%;
 }
 
-div#urgency {
-    top: 680px;
-    width: 200px;
+select#urgency {
+    top: 61.5%;
 }
 
 select.centered
@@ -162,6 +161,36 @@ select.centered
 }
 
 
+img#generateDesigned {
+    position: absolute;
+    top: 48%;
+    left: 57.5%;
+}
+
+img#generateRandom {
+    position: absolute;
+    top: 68%;
+    left: 53%;
+    width: 30px;
+    height: 30px;
+
+}
+
+.tagline {
+    position: absolute;
+    top: 55%;
+    left: 68%;
+}
+
+.tagline img {
+    position: relative;
+    width: 100%;
+}
+.tagline label {
+    position: absolute;
+    top: 0;
+    margin: 20px;
+}
 
 
 

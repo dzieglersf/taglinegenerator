@@ -42,10 +42,10 @@
 		benefits = dropdownSelections.filter( function(row){ return row.type == 3; });
 		urgencies = dropdownSelections.filter( function(row){ return row.type == 4; });
 
-		bindDropDown($("#category select"), categories);
-		bindDropDown($("#cta select"), ctas);
-		bindDropDown($("#benefit select"), benefits);
-		bindDropDown($("#urgency select"), urgencies);
+		bindDropDown($("select#category"), categories);
+		bindDropDown($("select#cta"), ctas);
+		bindDropDown($("select#benefit"), benefits);
+		bindDropDown($("select#urgency"), urgencies);
 	}
 
 	function generateRandom() {
@@ -60,10 +60,10 @@
 
 	function generateDesigned() {
 
-		var category = $("#category select").val();
-		var cta = $("#cta select").val();
-		var benefit = $("#benefit select").val();
-		var urgency = $("#urgency select").val();
+		var category = $("select#category").val();
+		var cta = $("select#cta").val();
+		var benefit = $("select#benefit").val();
+		var urgency = $("select#urgency").val();
 
 		if (category <=0 || cta <= 0 || benefit <= 0 || urgency <= 0) {
 			messageUser("Don't forget to select all your options to get the best tagline!");
@@ -98,7 +98,7 @@
 		var p3 = randomResults.filter( function(r){ return r.type === 3; })[0].phrase;
 		var p4 = randomResults.filter( function(r){ return r.type === 4; })[0].phrase;
 
-		$("#result").text(p2 + " " + p1 + " " + p3 + p4);
+		$("#result").text(p2 + " " + p1 + " " + p3 + " " + p4);
 	}
 
 	function setupPhraseData() {
