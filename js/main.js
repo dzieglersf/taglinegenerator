@@ -98,7 +98,7 @@
 		var p3 = randomResults.filter( function(r){ return r.type === 3; })[0].phrase;
 		var p4 = randomResults.filter( function(r){ return r.type === 4; })[0].phrase;
 
-		$("#result").text(p2 + " " + p1 + " " + p3 + " " + p4);
+		$("#result p").text(p2 + " " + p1 + " " + p3 + " " + p4);
 	}
 
 	function setupPhraseData() {

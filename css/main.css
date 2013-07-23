@@ -105,24 +105,37 @@ body
     background-size: cover;
 }
 
-.centered
-{
+.centered {
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+}
+
+.centered.text {
+    text-align: center;
 }
 
 #title
 {
-    padding-top: 7%;
+    padding-top: 40px;
     position: relative;
 }
 
 #robot
 {
     position: relative;
+    top: -40px;
+    height: 900px;
+    width: 800px;
     z-index: 0;
 }
+
+#robot > img 
+{
+    height: 100%;
+    width: 100%;
+}
+
 #social
 {
     margin-top: -70px;
@@ -130,20 +143,22 @@ body
     left: 70%;
 }
 
+#lower_copy {
+    width: 600px;
+}
 select.question
 {
-    width: 10%;
-    left: 44.5%;
+    width: 200px;
+    left: 300px;
     position: absolute;
     z-index: 1;
 }
 
-select#category
-{
+select#category {
     top: 36%;
 }
 
-select#cta{
+select#cta {
     top: 44.5%;
 }
 
@@ -155,44 +170,84 @@ select#urgency {
     top: 61.5%;
 }
 
-select.centered
-{
-    width: 200px;
-}
-
-
 img#generateDesigned {
     position: absolute;
-    top: 48%;
-    left: 57.5%;
+    top: 440px;
+    left: 535px;
+    width: 50px;
+    height: 50px;
 }
 
 img#generateRandom {
     position: absolute;
-    top: 68%;
-    left: 53%;
+    top: 620px;
+    left: 460px;
     width: 30px;
     height: 30px;
-
 }
 
-.tagline {
+.right {
+    left: 680px;
+}
+
+.left {
+    left: -100px;
+}
+
+.banner {
     position: absolute;
-    top: 55%;
-    left: 68%;
+    top: 15%;
+    width: 120%;
 }
 
-.tagline img {
-    position: relative;
+.box {
+    position: absolute;
+    top: 440px;
+    width: 260px;
+    height: 260px;    
+}
+
+.box .container {
+    position: absolute;
     width: 100%;
 }
-.tagline label {
-    position: absolute;
-    top: 0;
-    margin: 20px;
+
+.box .caption {
+    display: block;
+    top: -30px;
+    height: 25px;
 }
 
+.box p {
+    position: relative;
+    width: 80%;
+    padding: 3% 3%;
+}
 
+footer {
+    display: inline;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+}
+#moxy {
+    display: inline;
+    position: relative;
+    width: 35%;
+    text-align: left;
+}
+
+#credits {
+    display: inline;
+    position: relative;
+    width: 35%;
+    text-align: right;
+}
+
+footer img {
+    position: relative;
+    display: block;
+}
 
 /* ==========================================================================
    Helper classes
