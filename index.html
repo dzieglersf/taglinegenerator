@@ -22,51 +22,58 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <img id="title" class="centered" src="img/MoxyTR-TaglineRobot.png" />
-        <div id="social">
-            <div><label>SHARE THIS PAGE</label></div>
-            <span id="socialbuttons"></span>
-        </div>
+        <div id="canvas">
 
-        <div id="robot" class="centered">
+            <img id="title" src="img/MoxyTR-TaglineRobot.png" />
+            <div id="social" class="right">
+                <div><label>SHARE THIS PAGE</label></div>
+                <span id="socialbuttons"></span>
+            </div>
 
-            <p class="left banner">Need a tagline or slogan?</p>
-            <img src="img/MoxyTR-Robot-nobuttons.png" />
-            <p class="right banner">The robot can assist you.</p> 
+            <div id="banner">
+                <img src="img/MoxyTR-stripe.jpg" />
+                <p class="left banner">Need a tagline or slogan?</p>
+                <p class="right banner">The robot can assist you.</p> 
+            </div>
 
             <div id="instructions" class="left box">
                 <img class="caption" src="img/MoxyTR-input-instructions.png" />
                 <img class="container" src="img/MoxyTR-box.png" />
-                <img src="img/MoxyTR-button-blue.png" />Give the robot your product data by answering its questions.  The press the blue button.
-                <br />---- OR -----<br />
-                <img src="img/MoxyTR-button-purple.png" />Let the robot generate a tagline using its randomizer algorithm.
+                <p><img class="button" src="img/MoxyTR-button-blue.png" />Give the robot your product data by answering its questions.  Then press the blue button.
+                <br /> &mdash; OR &mdash; <br />
+                <img class="button" src="img/MoxyTR-button-purple.png" />Let the robot generate a tagline using its randomizer algorithm.</p>
             </div>
-
-            <select id="category" class="question"><option value="0">Pick one!</option></select>
-            <select id="cta" class="question"><option value="0">Pick one!</option></select>
-            <select id="benefit" class="question"><option value="0">Pick one!</option></select>
-            <select id="urgency" class="question"><option value="0">Pick one!</option></select>
 
             <div id="result" class="right box">
                 <img class="caption" src="img/MoxyTR-your-tagline.png" />
                 <img class="container" src="img/MoxyTR-box.png" />
                 <p></p>
             </div>
-
-            <div><img src="img/MoxyTR-button-blue.png" id="generateDesigned" alt="Generate my tag line!" /></div>
-            <div><img src="img/MoxyTR-button-purple.png" id="generateRandom" alt="Generate random tag line!" /></div>
-</div>
         
-        <p id="lower_banner" class="centered text">Dissatisfied with the work of soulless automatons?</p>
-        <p id="lower_copy" class="centered text">The marketing professionals at Moxy Creative are not only copywriting experts -- they're also sentient, carbon-based life forms.
+            <div id="robot" >
+
+                <img src="img/MoxyTR-Robot-nobuttons.png" />
+
+                <select id="category" class="question"><option value="0">Pick one!</option></select>
+                <select id="cta" class="question"><option value="0">Pick one!</option></select>
+                <select id="benefit" class="question"><option value="0">Pick one!</option></select>
+                <select id="urgency" class="question"><option value="0">Pick one!</option></select>
+
+                <div><img src="img/MoxyTR-button-blue.png" id="generateDesigned" alt="Generate my tag line!" /></div>
+                <div><img src="img/MoxyTR-button-purple.png" id="generateRandom" alt="Generate random tag line!" /></div>
+
+            </div>
+        <div>
+         
+        <p id="lower_copy1" class="centered text">Dissatisfied with the work of soulless automatons?</p>
+        <p id="lower_copy2" class="centered text">The marketing professionals at Moxy Creative are not only copywriting experts &mdash; they're also sentient, carbon-based life forms.
         <br/>Find us at <a href="http://thinkmoxy.com" target="_blank">ThinkMoxy.com</a>.</p>
 
         <footer>
             <div id="moxy">@2013 Moxy Creative. All rights reserved.<br/><a href="http://thinkmoxy.com" target="_blank">ThinkMoxy.com</a>.<a href="mailto:info@thinkmoxy.com">info@thinkmoxy.com</a>.</div>
-            <img src="img/moxylogo.png" />
+            <div id="logo"><img src="img/moxylogo.png" /></div>
             <div id="credits">WEB DESIGN /ILLUSTRATION <a href="http://michaelmoreau.com/" target="_blank">Michael Moreau</a><br/>WEB PRODUCTION <a href="http://www.linkedin.com/in/dzieglersf" target="_blank">David Ziegler</a></div>
         </footer>
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/vendor/jquery.csv-0.71.min.js"></script>

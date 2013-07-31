@@ -24,6 +24,13 @@ body {
     line-height: 1.4;
 }
 
+a {
+    color: #1E90FF;
+}
+a:link {
+    text-decoration: none;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -99,10 +106,13 @@ html, body
     height: 100%;
 }
 
-body
+#canvas
 {
-    background-image:url('../img/MoxyTR-bkgdwstripe.jpg');
+    height: 1450px;
+    width: 100%;
+    background-image:url('../img/MoxyTR-bkgd.jpg');
     background-size: cover;
+
 }
 
 .centered {
@@ -117,20 +127,30 @@ body
 
 #title
 {
+    left: 510px;
     padding-top: 40px;
     position: relative;
+}
+
+#banner
+{
+    height: 50px;
+    position: absolute;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-size: 1.5em;
 }
 
 #robot
 {
     position: relative;
     top: -40px;
+    left: 320px;
     height: 900px;
     width: 800px;
     z-index: 0;
 }
 
-#robot > img 
+#robot > img:first-child
 {
     height: 100%;
     width: 100%;
@@ -138,14 +158,38 @@ body
 
 #social
 {
+    width: 400px;
     margin-top: -70px;
     position: absolute;
-    left: 70%;
 }
 
-#lower_copy {
+#instructions p {
+    position: relative;
+    top: -20px;
+    padding: 10px 10px;
+    font-size: 0.70em;
+}
+
+.button {
+    float: left;
+}
+
+#result p {
+    position: relative;
+    top: -20px;
+    width: 80%;
+    padding: 3% 3%;
+
+}
+
+#lower_copy1 {
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+#lower_copy2 {
     width: 600px;
 }
+
 select.question
 {
     width: 200px;
@@ -187,22 +231,22 @@ img#generateRandom {
 }
 
 .right {
-    left: 680px;
+    left: 1000px;
 }
 
 .left {
-    left: -100px;
+    left: 100px;
 }
 
 .banner {
     position: absolute;
-    top: 15%;
-    width: 120%;
+    top: -10px;
+    width: 100%;
 }
 
 .box {
     position: absolute;
-    top: 440px;
+    top: 600px;
     width: 260px;
     height: 260px;    
 }
@@ -210,6 +254,7 @@ img#generateRandom {
 .box .container {
     position: absolute;
     width: 100%;
+    z-index: 0;
 }
 
 .box .caption {
@@ -218,21 +263,19 @@ img#generateRandom {
     height: 25px;
 }
 
-.box p {
-    position: relative;
-    width: 80%;
-    padding: 3% 3%;
-}
-
 footer {
     display: inline;
+    font-size: 0.75em;
     height: 100px;
-    width: 100%;
+    width: 1360px;
     position: absolute;
 }
+
 #moxy {
     display: inline;
     position: relative;
+    left: 10px;
+    float: left;
     width: 35%;
     text-align: left;
 }
@@ -240,13 +283,18 @@ footer {
 #credits {
     display: inline;
     position: relative;
+    float: right;
     width: 35%;
     text-align: right;
 }
 
-footer img {
+#logo {
+    display: inline;
     position: relative;
-    display: block;
+    left: 150px;
+}
+
+#logo img {
 }
 
 /* ==========================================================================

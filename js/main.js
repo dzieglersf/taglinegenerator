@@ -14,6 +14,7 @@
 	var categories, ctas, benefits, urgencies; // stores options/values for each dropdown
 	var phrases; // stores all the phrases
 	var randomResults; // stores the results of the random phrase gets
+	var tagline; // stores the tagline 
 
 	setupSelectionData();
 	
@@ -98,7 +99,8 @@
 		var p3 = randomResults.filter( function(r){ return r.type === 3; })[0].phrase;
 		var p4 = randomResults.filter( function(r){ return r.type === 4; })[0].phrase;
 
-		$("#result p").text(p2 + " " + p1 + " " + p3 + " " + p4);
+		tagline =p2 + " " + p1 + " " + p3 + p4;
+		$("#result p").text(tagline);
 	}
 
 	function setupPhraseData() {
@@ -122,7 +124,6 @@
 		var result = candidatePhrases[randomNumber].phrase;
 		randomResults.push({ type: type, phrase: result });
 		next();
-		;
  	}}
 
  	function beginAnimation() {}
