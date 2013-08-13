@@ -43,7 +43,7 @@
 			
 			// green button for answered, yellow button for unanswered
 			$(control).change(function() {
-				if (control.val()!= 0) {
+				if (control.val() != 0) {
 					control.prev().removeClass("unanswered");
 					control.prev().addClass("answered");
   				} else {
