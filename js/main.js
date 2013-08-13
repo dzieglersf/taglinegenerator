@@ -34,10 +34,22 @@
 	function setupDropdowns() {
 
 		function bindDropDown(control, selections) {
+
+			// sort the options
 			var options = selections.sort( function(a,b){return a.value - b.value});
+
+			// add all the sorted options to the select
 			$.each(options, function(index, o) { control.append($('<option></option>').val(o.value).html(o.option)); });
+			
+			// green button for answered, yellow button for unanswered
 			$(control).change(function() {
-  				alert( "Handler for .change() called." );
+				if (control.val()!= 0) {
+					control.prev().removeClass("unanswered");
+					control.prev().addClass("answered");
+  				} else {
+					control.prev().removeClass("answered");
+					control.prev().addClass("unanswered");
+  				}
 			});
 		}
 
