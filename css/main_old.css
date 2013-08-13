@@ -108,9 +108,9 @@ html, body
 
 #canvas
 {
-    height: 1280px;
-    width: 1280px;
-    background-image: url('../img/MoxyTR-bkgdwstripe.jpg');
+    height: 1450px;
+    width: 100%;
+    background-image:url('../img/MoxyTR-bkgd.jpg');
     background-size: cover;
 
 }
@@ -127,9 +127,7 @@ html, body
 
 #title
 {
-    left: 435px;
-    width: 410px;
-    height: 157px;
+    left: 510px;
     padding-top: 40px;
     position: relative;
 }
@@ -139,16 +137,16 @@ html, body
     height: 50px;
     position: absolute;
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
 #robot
 {
     position: relative;
     top: -40px;
-    left: 324px;
-    width: 632px;
-    height: 729px;
+    left: 320px;
+    height: 900px;
+    width: 800px;
     z-index: 0;
 }
 
@@ -160,15 +158,9 @@ html, body
 
 #social
 {
-    width: 200px;
-    height: 50px;
+    width: 400px;
     margin-top: -70px;
     position: absolute;
-}
-
-#social label {
-    font-size: .75em;
-
 }
 
 #instructions p {
@@ -198,84 +190,65 @@ html, body
     width: 600px;
 }
 
-img.question {
-    width: 24px;
-    height: 24px;
-    left: 210px;
-    position: absolute;
-}
-
-img.unanswered {
-    background-image: url('../img/MoxyTR-button-sm-yellow.png');
-}
-
-img.answered {
-    background-image: url('../img/MoxyTR-button-sm-green.png');
-}
-
 select.question
 {
-    width: 165px;
-    left: 235px;
+    width: 200px;
+    left: 300px;
     position: absolute;
     z-index: 1;
 }
 
-.category {
+select#category {
     top: 36%;
 }
 
-.cta {
+select#cta {
     top: 44.5%;
 }
 
-.benefit {
+select#benefit {
     top: 53%;
 }
 
-.urgency {
+select#urgency {
     top: 61.5%;
 }
 
 img#generateDesigned {
     position: absolute;
-    top: 344px;
-    left: 420px;
-    width: 42px;
-    height: 43px;
+    top: 440px;
+    left: 535px;
+    width: 50px;
+    height: 50px;
 }
 
 img#generateRandom {
     position: absolute;
-    top: 496px;
-    left: 360px;
+    top: 620px;
+    left: 460px;
     width: 30px;
     height: 30px;
 }
 
-.banner.right {
-    left: 850px;
-}
-
 .right {
-    left: 880px;
+    left: 1000px;
 }
 
 .left {
-    left: 120px;
+    left: 100px;
 }
 
 .banner {
     position: absolute;
-    top: 15px;
+    top: -10px;
     width: 100%;
 }
 
 .box {
     position: absolute;
-    top: 500px;
-    width: 284px;
-    height: 207px;    
+    top: 600px;
+    width: 260px;
+    height: 260px;    
 }
 
 .box .container {
@@ -287,23 +260,14 @@ img#generateRandom {
 .box .caption {
     display: block;
     top: -30px;
-    height: 26px;
+    height: 25px;
 }
-/*
-footer {
-    font-size: 0.75em;
-    height: 100px;
-    width: 1280px;
-    position: absolute;
-}*/
-
 
 footer {
     display: inline;
     font-size: 0.75em;
     height: 100px;
-    width: 1040px;
-    left: 120px;
+    width: 1360px;
     position: absolute;
 }
 
@@ -312,52 +276,26 @@ footer {
     position: relative;
     left: 10px;
     float: left;
-    width: 431px;
+    width: 35%;
     text-align: left;
 }
 
-#logo {
-    display: inline;
-    position: relative;
-    
-}
 #credits {
     display: inline;
     position: relative;
     float: right;
+    width: 35%;
     text-align: right;
-}
-/*
-
-
-footer {
-    position: absolute;
-    left: 120px;
-    width: 1040px;
-}
-
-#moxy {
-    display: inline;
-    position: absolute;
-
-    width: 430px;
 }
 
 #logo {
     display: inline;
-    float: left;
-    left: 430px;
-    width: 180px;
+    position: relative;
+    left: 150px;
 }
 
-#credits {
-    display: inline;
-    position: absolute;
-    text-align: right;
-    width: 430px;
+#logo img {
 }
-*/
-
 
 /* ==========================================================================
    Helper classes

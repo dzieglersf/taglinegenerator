@@ -36,6 +36,9 @@
 		function bindDropDown(control, selections) {
 			var options = selections.sort( function(a,b){return a.value - b.value});
 			$.each(options, function(index, o) { control.append($('<option></option>').val(o.value).html(o.option)); });
+			$(control).change(function() {
+  				alert( "Handler for .change() called." );
+			});
 		}
 
 		categories = dropdownSelections.filter( function(row){ return row.type == 1; });
@@ -43,10 +46,10 @@
 		benefits = dropdownSelections.filter( function(row){ return row.type == 3; });
 		urgencies = dropdownSelections.filter( function(row){ return row.type == 4; });
 
-		bindDropDown($("select#category"), categories);
-		bindDropDown($("select#cta"), ctas);
-		bindDropDown($("select#benefit"), benefits);
-		bindDropDown($("select#urgency"), urgencies);
+		bindDropDown($("select.category"), categories);
+		bindDropDown($("select.cta"), ctas);
+		bindDropDown($("select.benefit"), benefits);
+		bindDropDown($("select.urgency"), urgencies);
 	}
 
 	function generateRandom() {
@@ -61,10 +64,10 @@
 
 	function generateDesigned() {
 
-		var category = $("select#category").val();
-		var cta = $("select#cta").val();
-		var benefit = $("select#benefit").val();
-		var urgency = $("select#urgency").val();
+		var category = $("select.category").val();
+		var cta = $("select.cta").val();
+		var benefit = $("select.benefit").val();
+		var urgency = $("select.urgency").val();
 
 		if (category <=0 || cta <= 0 || benefit <= 0 || urgency <= 0) {
 			messageUser("Don't forget to select all your options to get the best tagline!");
