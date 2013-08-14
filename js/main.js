@@ -10,6 +10,8 @@
 		  return generateRandom();
 		});
 
+	var RESULT_LENGTH_THRESHOLD = 70;
+
 	var dropdownSelections = []; // stores all the selection options/values
 	var categories, ctas, benefits, urgencies; // stores options/values for each dropdown
 	var phrases; // stores all the phrases
@@ -115,7 +117,17 @@
 		var p4 = randomResults.filter( function(r){ return r.type === 4; })[0].phrase;
 
 		tagline =p2 + " " + p1 + " " + p3 + p4;
-		$("#result p").text(tagline);
+
+		var resultField = $("#result p");
+		resultField.text(tagline);
+
+		if (tagline.length < RESULT_LENGTH_THRESHOLD) {
+			resultField.removeClass("font-small");
+			resultField.addClass("font-large");
+		} else {
+			resultField.removeClass("font-large");
+			resultField.addClass("font-small");
+		}
 	}
 
 	function setupPhraseData() {

@@ -21,7 +21,6 @@ textarea {
 body {
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 1.5em;
-    line-height: 1.4;
 }
 
 a {
@@ -101,6 +100,12 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+select {
+   
+   }
+
+
+
 html, body
 {
     height: 100%;
@@ -134,32 +139,21 @@ html, body
     position: relative;
 }
 
-#banner
-{
-    height: 50px;
-    position: absolute;
-    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-    font-size: 1.25em;
-}
-
-#robot
-{
+#robot {
     position: relative;
-    top: -40px;
+    top: -20px;
     left: 324px;
     width: 632px;
     height: 729px;
     z-index: 0;
 }
 
-#robot > img:first-child
-{
+#robot > img:first-child {
     height: 100%;
     width: 100%;
 }
 
-#social
-{
+#social {
     width: 200px;
     height: 50px;
     margin-top: -70px;
@@ -171,15 +165,47 @@ html, body
 
 }
 
-#instructions p {
+.box {
+    position: absolute;
+    top: 500px;
+    width: 284px;
+    height: 207px;    
+}
+
+.box .container {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.box .caption {
+    display: block;
+    top: -30px;
+    height: 26px;
+}
+
+#instructions > div {
     position: relative;
-    top: -20px;
-    padding: 10px 10px;
+    top: 20px;
     font-size: 0.70em;
 }
 
+div.instruction_text {
+    margin-left: 65px;
+    width: 220px;
+}
+
 .button {
+    margin-left: 10px;
     float: left;
+}
+
+.font-large {
+    font-size: 1.25em;
+}
+
+.font-small {
+    font-size: 1.10em;
 }
 
 #result p {
@@ -195,7 +221,8 @@ html, body
 }
 
 #lower_copy2 {
-    width: 600px;
+    width: 500px;
+    font-size: 0.85em;
 }
 
 img.question {
@@ -218,7 +245,8 @@ select.question
     width: 165px;
     left: 235px;
     position: absolute;
-    z-index: 1;
+    background: transparent;
+    font-size: 12px;
 }
 
 .category {
@@ -253,6 +281,15 @@ img#generateRandom {
     height: 30px;
 }
 
+.banner
+{
+    height: 50px;
+    top: 250px;
+    position: absolute;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-size: 1.1em;
+}
+
 .banner.right {
     left: 850px;
 }
@@ -264,39 +301,6 @@ img#generateRandom {
 .left {
     left: 120px;
 }
-
-.banner {
-    position: absolute;
-    top: 15px;
-    width: 100%;
-}
-
-.box {
-    position: absolute;
-    top: 500px;
-    width: 284px;
-    height: 207px;    
-}
-
-.box .container {
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-}
-
-.box .caption {
-    display: block;
-    top: -30px;
-    height: 26px;
-}
-/*
-footer {
-    font-size: 0.75em;
-    height: 100px;
-    width: 1280px;
-    position: absolute;
-}*/
-
 
 footer {
     display: inline;
