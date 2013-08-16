@@ -100,12 +100,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-select {
-   
-   }
-
-
-
 html, body
 {
     height: 100%;
@@ -153,16 +147,16 @@ html, body
     width: 100%;
 }
 
-#social {
+#share_page {
     width: 200px;
     height: 50px;
     margin-top: -70px;
     position: absolute;
 }
 
-#social label {
+#share_page label {
+    display: inline;
     font-size: .75em;
-
 }
 
 .box {
@@ -187,12 +181,12 @@ html, body
 #instructions > div {
     position: relative;
     top: 20px;
-    font-size: 0.70em;
+    font-size: 0.69em;
 }
 
 div.instruction_text {
     margin-left: 65px;
-    width: 220px;
+    width: 210px;
 }
 
 .button {
@@ -213,7 +207,6 @@ div.instruction_text {
     top: -20px;
     width: 80%;
     padding: 3% 3%;
-
 }
 
 #lower_copy1 {
@@ -222,7 +215,7 @@ div.instruction_text {
 
 #lower_copy2 {
     width: 500px;
-    font-size: 0.85em;
+    font-size: 0.80em;
 }
 
 img.question {
@@ -239,6 +232,93 @@ img.unanswered {
 img.answered {
     background-image: url('../img/MoxyTR-button-sm-green.png');
 }
+
+#wire1 {
+    position: fixed;
+    z-index: 0;    
+}
+
+#wire1.off {
+    background-image: url('../img/MoxyTR-robot-wire1.png');
+    width: 41px;
+    height: 96px;
+    top: 448px;
+    left: 720px;
+}
+
+#wire1.on {
+    background-image: url('../img/MoxyTR-robot-wire1-on.png');
+    width: 41px;
+    height: 120px;
+    top: 440px;
+    left: 715px;
+}
+
+#wire2 {
+    position: fixed;
+    z-index: 0;    
+}
+
+#wire2.off {
+    background-image: url('../img/MoxyTR-robot-wire2.png');
+    width: 41px;
+    height: 32px;
+    top: 508px;
+    left: 720px;
+}
+
+#wire2.on {
+    background-image: url('../img/MoxyTR-robot-wire2-on.png');
+    width: 41px;
+    height: 40px;
+    top: 500px;
+    left: 715px;
+}
+
+#wire3 {
+    position: fixed;
+    z-index: 0;    
+}
+
+#wire3.off {
+    background-image: url('../img/MoxyTR-robot-wire3.png');
+    width: 41px;
+    height: 32px;
+    top: 542px;
+    left: 720px;
+}
+
+#wire3.on {
+    background-image: url('../img/MoxyTR-robot-wire3-on.png');
+    width: 41px;
+    height: 40px;
+    top: 534px;
+    left: 715px;
+}
+
+#wire4 {
+    position: fixed;
+    z-index: 0;    
+}
+
+#wire4.off {
+    background-image: url('../img/MoxyTR-robot-wire4.png');
+    width: 41px;
+    height: 96px;
+    top: 542px;
+    left: 720px;
+}
+
+#wire4.on {
+    background-image: url('../img/MoxyTR-robot-wire4-on.png');
+    width: 41px;
+    height: 120px;
+    top: 534px;
+    left: 715px;
+}
+
+
+
 
 select.question
 {
@@ -271,6 +351,7 @@ img#generateDesigned {
     left: 420px;
     width: 42px;
     height: 43px;
+    z-index: 0;
 }
 
 img#generateRandom {
@@ -304,7 +385,7 @@ img#generateRandom {
 
 footer {
     display: inline;
-    font-size: 0.75em;
+    font-size: 0.65em;
     height: 100px;
     width: 1040px;
     left: 120px;
@@ -331,36 +412,6 @@ footer {
     float: right;
     text-align: right;
 }
-/*
-
-
-footer {
-    position: absolute;
-    left: 120px;
-    width: 1040px;
-}
-
-#moxy {
-    display: inline;
-    position: absolute;
-
-    width: 430px;
-}
-
-#logo {
-    display: inline;
-    float: left;
-    left: 430px;
-    width: 180px;
-}
-
-#credits {
-    display: inline;
-    position: absolute;
-    text-align: right;
-    width: 430px;
-}
-*/
 
 
 /* ==========================================================================

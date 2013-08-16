@@ -151,11 +151,45 @@
 		var result = candidatePhrases[randomNumber].phrase;
 		randomResults.push({ type: type, phrase: result });
 		next();
- 	}}
+	 	}
+	 }
 
- 	function beginAnimation() {}
-	
-	function endAnimation() {}
+ 	function beginAnimation() {
+ 		clr = null;
+ 		rep = 0;
+
+ 		// reset all to off
+		$('#wire1').addClass("off").removeClass("on");
+		$('#wire2').addClass("off").removeClass("on");
+		$('#wire3').addClass("off").removeClass("on");
+		$('#wire4').addClass("off").removeClass("on");
+
+ 	    function loop() {
+ 	    	
+ 	    	// prepare the stop handle and the number of interations
+            clearTimeout(clr);
+            var NUMBER_OF_ITERATIONS = 7; // odd to end at "on"
+            var iteration = 0;
+
+            // define the animation
+            function inloop() {
+        		iteration += 1;
+				$('#wire1').toggleClass("off").toggleClass("on");
+				$('#wire2').toggleClass("on").toggleClass("off");
+				$('#wire3').toggleClass("off").toggleClass("on");
+				$('#wire4').toggleClass("on").toggleClass("off");
+
+	          	if (!(iteration < NUMBER_OF_ITERATIONS)) { return; }
+    	       	clr = setTimeout(inloop, 100);
+            };
+            inloop();
+        };
+        loop();
+    }
+
+	function endAnimation() {
+
+	}
 
 	function messageUser(str) {
 		alertify.alert(str);
