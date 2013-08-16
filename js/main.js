@@ -13,7 +13,7 @@
 	var RESULT_LENGTH_THRESHOLD = 70;
 
 	var SETUP_ERROR_MESSAGE = "The robot has blown a fuse!  Our bad.  Please try again later!"
-	var SELECTIONS_INCOMPLETE_ERROR_MESSAGE = "Don't forget to select all your options to get the best tagline!";
+	var SELECTIONS_INCOMPLETE_ERROR_MESSAGE = "Select all the options in the Robot Tagline Generator's central command console to get the best tagline!";
 
 	var dropdownSelections = []; // stores all the selection options/values
 	var categories, ctas, benefits, urgencies; // stores options/values for each dropdown
