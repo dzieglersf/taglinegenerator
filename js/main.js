@@ -12,6 +12,9 @@
 
 	var RESULT_LENGTH_THRESHOLD = 70;
 
+	var SETUP_ERROR_MESSAGE = "The robot has blown a fuse!  Our bad.  Please try again later!"
+	var SELECTIONS_INCOMPLETE_ERROR_MESSAGE = "Don't forget to select all your options to get the best tagline!";
+
 	var dropdownSelections = []; // stores all the selection options/values
 	var categories, ctas, benefits, urgencies; // stores options/values for each dropdown
 	var phrases; // stores all the phrases
@@ -24,7 +27,7 @@
         $.ajax({
             url : "data/selections.csv",
             async: false,
-			error: function() { messageUser("We can't seem to set up the Tagline Generator.  Please try again later!"); },
+			error: function() { messageUser(SETUP_ERROR_MESSAGE); },
 			success : function (data) {
             	dropdownSelections = $.csv.toObjects(data);
             },
@@ -68,10 +71,10 @@
 
 	function generateRandom() {
 
-		var randomCategory =Math.floor(Math.random()*categories.length + 1);
-		var randomCta =Math.floor(Math.random()*ctas.length + 1);
-		var randomBenefit =Math.floor(Math.random()*benefits.length + 1);
-		var randomUrgency =Math.floor(Math.random()*urgencies.length + 1);
+		var randomCategory = Math.floor(Math.random()*categories.length + 1);
+		var randomCta = Math.floor(Math.random()*ctas.length + 1);
+		var randomBenefit = Math.floor(Math.random()*benefits.length + 1);
+		var randomUrgency = Math.floor(Math.random()*urgencies.length + 1);
 
 		getTagline(randomCategory, randomCta, randomBenefit, randomUrgency);
 	}
@@ -84,7 +87,7 @@
 		var urgency = $("select.urgency").val();
 
 		if (category <=0 || cta <= 0 || benefit <= 0 || urgency <= 0) {
-			messageUser("Don't forget to select all your options to get the best tagline!");
+			messageUser(SELECTIONS_INCOMPLETE_ERROR_MESSAGE);
 		}
 		else {
 			getTagline(category, cta, benefit, urgency);
@@ -108,6 +111,18 @@
 		_(actions).reduceRight(_.wrap, function() { displayResult(); endAnimation(); })();
 
 	}
+
+	function getRandomPhrase(type, selection) { return function(next) { 
+
+		if (phrases === undefined) { setupPhraseData(); }
+		
+		var candidatePhrases = phrases.filter( function(p) { return p.type == type && p.selection == selection; } );
+		var randomNumber = Math.floor(Math.random() * (candidatePhrases.length));
+		var result = candidatePhrases[randomNumber].phrase;
+		randomResults.push({ type: type, phrase: result });
+		next();
+	 	}
+	 }
 
 	function displayResult() {
 
@@ -134,7 +149,7 @@
 			$.ajax({
             url : "data/phrases.csv",
             async: false,
-			error: function() { messageUser("Our monkey has been over-worked.  Please try again later!"); },
+			error: function() { messageUser(SETUP_ERROR_MESSAGE); },
 			success : function (data) {
             	phrases = $.csv.toObjects(data);
             },
@@ -142,18 +157,6 @@
         });
 	}
 	
-	function getRandomPhrase(type, selection) { return function(next) { 
-
-		if (phrases === undefined) { setupPhraseData(); }
-		
-		var candidatePhrases = phrases.filter( function(p) { return p.type == type && p.selection == selection; } );
-		var randomNumber = Math.floor(Math.random() * (candidatePhrases.length));
-		var result = candidatePhrases[randomNumber].phrase;
-		randomResults.push({ type: type, phrase: result });
-		next();
-	 	}
-	 }
-
  	function beginAnimation() {
  		clr = null;
  		rep = 0;
