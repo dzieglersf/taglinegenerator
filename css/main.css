@@ -221,7 +221,7 @@ div.instruction_text {
 img.question {
     width: 24px;
     height: 24px;
-    left: 210px;
+    left: 200px;
     position: absolute;
 }
 
@@ -233,137 +233,108 @@ img.answered {
     background-image: url('../img/MoxyTR-button-sm-green.png');
 }
 
-#wire1 {
-    position: fixed;
-    z-index: 0;    
+.wire {
+    position: absolute;
 }
 
-#wire1.off {
-    background-image: url('../img/MoxyTR-robot-wire1.png');
-    width: 41px;
-    height: 96px;
-    top: 448px;
-    left: 720px;
+.wire.visible {
+    visibility: visible;
 }
 
-#wire1.on {
-    background-image: url('../img/MoxyTR-robot-wire1-on.png');
-    width: 41px;
-    height: 120px;
-    top: 440px;
-    left: 715px;
+.wire.hidden {
+    visibility: hidden;
 }
 
-#wire2 {
-    position: fixed;
-    z-index: 0;    
+#wire1-off {
+    top: 268px;
+    left: 392px;
 }
 
-#wire2.off {
-    background-image: url('../img/MoxyTR-robot-wire2.png');
-    width: 41px;
-    height: 32px;
-    top: 508px;
-    left: 720px;
+#wire1-on {
+    top: 260px;
+    left: 384px;
 }
 
-#wire2.on {
-    background-image: url('../img/MoxyTR-robot-wire2-on.png');
-    width: 41px;
-    height: 40px;
-    top: 500px;
-    left: 715px;
+#wire2-off {
+    top: 333px;
+    left: 392px;
 }
 
-#wire3 {
-    position: fixed;
-    z-index: 0;    
+#wire2-on {
+    top: 321px;
+    left: 386px;
 }
 
-#wire3.off {
-    background-image: url('../img/MoxyTR-robot-wire3.png');
-    width: 41px;
-    height: 32px;
-    top: 542px;
-    left: 720px;
+#wire3-off {
+    top: 366px;
+    left: 390px;
 }
 
-#wire3.on {
-    background-image: url('../img/MoxyTR-robot-wire3-on.png');
-    width: 41px;
-    height: 40px;
-    top: 534px;
-    left: 715px;
+#wire3-on {
+    top: 358px;
+    left: 382px;
 }
 
-#wire4 {
-    position: fixed;
-    z-index: 0;    
+#wire4-off {
+    top: 368px;
+    left: 392px;
 }
 
-#wire4.off {
-    background-image: url('../img/MoxyTR-robot-wire4.png');
-    width: 41px;
-    height: 96px;
-    top: 542px;
-    left: 720px;
+#wire4-on {
+    top: 356px;
+    left: 384px;
 }
-
-#wire4.on {
-    background-image: url('../img/MoxyTR-robot-wire4-on.png');
-    width: 41px;
-    height: 120px;
-    top: 534px;
-    left: 715px;
-}
-
-
-
 
 select.question
 {
     width: 165px;
-    left: 235px;
+    left: 228px;
     position: absolute;
     background: transparent;
     font-size: 12px;
 }
 
 .category {
-    top: 36%;
+    top: 260px;
 }
 
 .cta {
-    top: 44.5%;
+    top: 324px;
 }
 
 .benefit {
-    top: 53%;
+    top: 388px;
 }
 
 .urgency {
-    top: 61.5%;
+    top: 450px;
+}
+
+img#generateDesigned-fixed {
+    position: absolute;
+    top: 342px;
+    left: 428px;
+    width: 38px;
+    height: 38px;
 }
 
 img#generateDesigned {
     position: absolute;
-    top: 344px;
-    left: 420px;
-    width: 42px;
-    height: 43px;
-    z-index: 0;
+    top: 342px;
+    left: 428px;
+    width: 38px;
+    height: 38px;
 }
 
 img#generateRandom {
     position: absolute;
-    top: 496px;
+    top: 492px;
     left: 360px;
-    width: 30px;
-    height: 30px;
+    width: 38px;
+    height: 38px;
 }
 
-.banner
-{
+.banner {
     height: 50px;
     top: 250px;
     position: absolute;

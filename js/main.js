@@ -21,6 +21,10 @@
 	var randomResults; // stores the results of the random phrase gets
 	var tagline; // stores the tagline 
 
+	window.pulse_image = null;
+	window.pulse_continue_loop = false;
+	window.pulse_image = $('#generateDesigned');
+	
 	setupSelectionData();
 	
 	function setupSelectionData() {
@@ -36,6 +40,16 @@
         });
 	}
 
+	function ShouldPulse() {
+		if ( $("select.category").val() > 0 && $("select.cta").val() > 0 && $("select.benefit").val() > 0 && $("select.urgency").val() > 0 ) {
+			window.pulse_continue_loop = true;
+			return true;
+		} else {
+			window.pulse_continue_loop = false;
+			return false;
+		}
+	}
+
 	function setupDropdowns() {
 
 		function bindDropDown(control, selections) {
@@ -49,12 +63,15 @@
 			// green button for answered, yellow button for unanswered
 			$(control).change(function() {
 				if (control.val() != 0) {
-					control.prev().removeClass("unanswered");
-					control.prev().addClass("answered");
+					control.prev().removeClass("unanswered").addClass("answered");
+					control.next().removeClass("visible").addClass("invisible");
+					control.next().next().removeClass("invisible").addClass("visible");
   				} else {
-					control.prev().removeClass("answered");
-					control.prev().addClass("unanswered");
+					control.prev().removeClass("answered").addClass("unanswered");
+					control.next().removeClass("invisible").addClass("visible");
+					control.next().next().removeClass("visible").addClass("invisible");
   				}
+				if (ShouldPulse()) { PulseButton(); }
 			});
 		}
 
@@ -161,26 +178,20 @@
  		clr = null;
  		rep = 0;
 
- 		// reset all to off
-		$('#wire1').addClass("off").removeClass("on");
-		$('#wire2').addClass("off").removeClass("on");
-		$('#wire3').addClass("off").removeClass("on");
-		$('#wire4').addClass("off").removeClass("on");
-
  	    function loop() {
  	    	
  	    	// prepare the stop handle and the number of interations
             clearTimeout(clr);
-            var NUMBER_OF_ITERATIONS = 7; // odd to end at "on"
+            var NUMBER_OF_ITERATIONS = 8; // even to end at initial state
             var iteration = 0;
 
             // define the animation
             function inloop() {
         		iteration += 1;
-				$('#wire1').toggleClass("off").toggleClass("on");
-				$('#wire2').toggleClass("on").toggleClass("off");
-				$('#wire3').toggleClass("off").toggleClass("on");
-				$('#wire4').toggleClass("on").toggleClass("off");
+				$('#wire1-on').toggleClass("visible").toggleClass("invisible");
+				$('#wire2-on').toggleClass("visible").toggleClass("invisible");
+				$('#wire3-on').toggleClass("visible").toggleClass("invisible");
+				$('#wire4-on').toggleClass("visible").toggleClass("invisible");
 
 	          	if (!(iteration < NUMBER_OF_ITERATIONS)) { return; }
     	       	clr = setTimeout(inloop, 100);
@@ -196,6 +207,29 @@
 
 	function messageUser(str) {
 		alertify.alert(str);
+	}
+
+
+	function PulseButton() {
+		var minOpacity = .5;
+		var fadeOutDuration = 450;
+		var fadeInDuration = 450;
+		
+		window.pulse_image.animate(
+			{ opacity: minOpacity }, 
+			fadeOutDuration, 
+			function() {
+				window.pulse_image.animate(
+					{ opacity: 1 }, 
+					fadeInDuration, 
+					function() {
+						if(window.pulse_continue_loop) {
+							PulseButton();
+						}
+					}
+				)
+			}
+		);
 	}
 
 }).call(this);
