@@ -129,6 +129,7 @@
 
 	}
 
+
 	function getRandomPhrase(type, selection) { return function(next) { 
 
 		if (phrases === undefined) { setupPhraseData(); }
@@ -148,7 +149,7 @@
 		var p3 = randomResults.filter( function(r){ return r.type === 3; })[0].phrase;
 		var p4 = randomResults.filter( function(r){ return r.type === 4; })[0].phrase;
 
-		tagline =p2 + " " + p1 + " " + p3 + p4;
+		tagline = p2 + " " + p1 + " " + p3 + p4;
 
 		var resultField = $("#result p");
 		resultField.text(tagline);
@@ -175,19 +176,44 @@
 	}
 	
  	function beginAnimation() {
+
  		clr = null;
- 		rep = 0;
 
  	    function loop() {
  	    	
  	    	// prepare the stop handle and the number of interations
             clearTimeout(clr);
-            var NUMBER_OF_ITERATIONS = 8; // even to end at initial state
+            var NUMBER_OF_ITERATIONS = 12; // even to end wires at initial state; mod 3 = 0 to end faceplate at initial state
             var iteration = 0;
 
             // define the animation
             function inloop() {
-        		iteration += 1;
+
+	       		iteration += 1;
+
+	       		if (iteration % 3 == 1)	{
+	       			$('#robot-image').attr("src", "../img/MoxyTR-robot-noarms-faceplate2.png");
+	       		}
+	       		else if (iteration % 3 == 2) {
+					$('#robot-image').attr("src", "../img/MoxyTR-robot-noarms-faceplate3.png");
+	       		}
+				else if (iteration % 3 == 0) {
+					$('#robot-image').attr("src", "../img/MoxyTR-robot-noarms-faceplate1.png");
+				}
+
+				if (iteration % 2 == 1)	{
+	       			$('#robot-arm.left-arm').attr("src", "../img/MoxyTR-robot-leftarm2.png");
+	       			$('#robot-arm.right-arm').attr("src", "../img/MoxyTR-robot-rightarm2.png");
+	       			$('#robot-arm.right-arm').toggleClass("on");
+	       			$('#robot-arm.left-arm').toggleClass("on");
+
+	       		}
+	       		else {
+	       			$('#robot-arm.left-arm').attr("src", "../img/MoxyTR-robot-leftarm1.png");
+	       			$('#robot-arm.right-arm').attr("src", "../img/MoxyTR-robot-rightarm1.png");
+	       		}
+
+
 				$('#wire1-on').toggleClass("visible").toggleClass("invisible");
 				$('#wire2-on').toggleClass("visible").toggleClass("invisible");
 				$('#wire3-on').toggleClass("visible").toggleClass("invisible");
@@ -195,7 +221,8 @@
 
 	          	if (!(iteration < NUMBER_OF_ITERATIONS)) { return; }
     	       	clr = setTimeout(inloop, 100);
-            };
+
+            }
             inloop();
         };
         loop();

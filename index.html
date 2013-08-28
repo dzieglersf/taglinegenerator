@@ -21,46 +21,31 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-        <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348357788629907";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        <div id="canvas">
+       <div id="canvas">
 
             <img id="title" src="img/MoxyTR-TaglineRobot.png" />
-            <div id="share_page" class="right">
-                <div><label>SHARE THIS PAGE</label></div>
-<a href="#" 
-  onclick="
-    window.open(
-      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
-      'facebook-share-dialog', 
-      'width=626,height=436'); 
-    return false;">
-  Share on Facebook
-</a>
-            </div>
 
             <div id="banner">
                 <!-- <img src="img/MoxyTR-stripe.jpg" /> -->
                 <p class="left banner">Need a tagline or slogan?</p>
                 <p class="right banner">The robot can assist you.</p> 
             </div>
+            <div id="share_page" class="right">
+                <label>SHARE THIS PAGE</label>
+                <span id="twitter" data-url="http://sharrre.com/" data-text="share twitter" data-title="Tweet"></span>
+                <span id="facebook" data-url="http://sharrre.com/" data-text="share facebook" data-title="Like"></span>
+                <span id="googleplus" data-url="http://sharrre.com/" data-text="share googleplus" data-title="+1">
+             </span>
+             </div>
 
-            <div id="instructions" class="left box">
+            <div id="instructions" class="left image-box">
                 <img class="caption" src="img/MoxyTR-input-instructions.png" />
                 <img class="container" src="img/MoxyTR-box.png" />
-                <div><img class="button" src="img/MoxyTR-button-blue.png" /><div class="instruction_text">Give the robot your product data by answering its questions.<br />Then press the blue button.</div><p id="or-word">&mdash; <b>OR</b> &mdash; </p><br /><br /><br />
-                <img class="button" src="img/MoxyTR-button-purple.png" /><div class="instruction_text">Let the robot generate a tagline using its randomizer algorithm.</div></div>
+                <div><img class="image-button" src="img/MoxyTR-button-blue.png" /><div class="instruction_text">Give the robot your product data by answering its questions.<br />Then press the blue button.</div><p id="or-word">&mdash; <b>OR</b> &mdash; </p><br /><br /><br />
+                <img class="image-button" src="img/MoxyTR-button-purple.png" /><div class="instruction_text">Let the robot generate a tagline using its randomizer algorithm.</div></div>
             </div>
 
-            <div id="result" class="right box">
+            <div id="result" class="right image-box">
                 <img class="caption" src="img/MoxyTR-your-tagline.png" />
                 <img class="container" src="img/MoxyTR-box.png" />
                 <p class="font-small"></p>
@@ -68,22 +53,23 @@
         
             <div id="robot" >
 
-                <img src="img/MoxyTR-Robot-nobuttons.png" />
+                <img id="robot-arm" class="left-arm" src="img/MoxyTR-robot-leftarm1.png">
+                <img id="robot-image" src="img/MoxyTR-robot-noarms-faceplate1.png" class="robot1" />
+                <img id="robot-arm" class="right-arm" src="img/MoxyTR-robot-rightarm1.png">
 
                 <img class="category question unanswered" /><select class="category question"><option value="0">Pick one!</option></select><img id="wire1-off" class="wire visible" src="../img/MoxyTR-robot-wire1.png"/><img id="wire1-on" class="wire invisible" src="../img/MoxyTR-robot-wire1-on.png"/>
                 <img class="cta question unanswered" /><select class="cta question"><option value="0">Pick one!</option></select><img id="wire2-off" class="wire visible" src="../img/MoxyTR-robot-wire2.png"/><img id="wire2-on" class="wire invisible" src="../img/MoxyTR-robot-wire2-on.png"/>
                 <img class="benefit question unanswered" /><select class="benefit question"><option value="0">Pick one!</option></select><img id="wire3-off" class="wire visible" src="../img/MoxyTR-robot-wire3.png"/><img id="wire3-on" class="wire invisible" src="../img/MoxyTR-robot-wire3-on.png"/>
                 <img class="urgency question unanswered" /><select class="urgency question"><option value="0">Pick one!</option></select><img id="wire4-off" class="wire visible" src="../img/MoxyTR-robot-wire4.png"/><img id="wire4-on" class="wire invisible" src="../img/MoxyTR-robot-wire4-on.png"/>
 
-             <!--    <div><img src="img/MoxyTR-button-blue.png" id="generateDesigned" alt="Generate my tag line!" /></div>
-              -->   <div><img src="img/MoxyTR-button-blue.png" id="generateDesigned" alt="Generate my tag line!" /></div>
-                <div><img src="img/MoxyTR-button-purple.png" id="generateRandom" alt="Generate random tag line!" /></div>
+            <div><img src="img/MoxyTR-button-blue.png" id="generateDesigned" alt="Generate my tag line!" /></div>
+            <div><img src="img/MoxyTR-button-purple.png" id="generateRandom" alt="Generate random tag line!" /></div>
 
 
             </div>
-            <div id="share_page" class="right">
+            <div id="share_result" class="right">
                 <div><label>SHARE YOUR RESULT</label></div>
-                <span id="socialbuttons"></span>
+               <!--  <span id="socialbuttons"></span> -->
             </div>
 
             <div>
@@ -92,9 +78,10 @@
                 <br/>Find us at <a href="http://thinkmoxy.com" target="_blank">ThinkMoxy.com</a>.</p>
             </div>
             <br/>
+
             <footer>
                 <div id="moxy">&copy;2013 Moxy Creative. All rights reserved.<br/><a href="http://thinkmoxy.com" target="_blank">ThinkMoxy.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:info@thinkmoxy.com" target="_blank">info@thinkmoxy.com</a></div>
-                <div id="logo"><img src="img/moxylogo.png" /></div>
+                <div id="logo"><a href="http://thinkmoxy.com" target="_blank"><img src="img/MoxyTR-logo.png" /></a></div>
                 <div id="credits">WEB DESIGN /ILLUSTRATION <a href="http://michaelmoreau.com/" target="_blank">Michael Moreau</a><br/>WEB PRODUCTION <a href="http://www.linkedin.com/in/dzieglersf" target="_blank">David Ziegler</a></div>
             </footer>
 
@@ -103,19 +90,21 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/vendor/jquery.csv-0.71.min.js"></script>
-        
         <script type="text/javascript" src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script type="text/javascript" src="js/vendor/alertify.min.js"></script>
         <script type="text/javascript" src="js/vendor/underscore.js"></script> 
-        <script type="text/javascript" src="js/vendor/jquery.share.js"></script>
+      <!--  <script type="text/javascript" src="js/vendor/jquery.share.js"></script> -->
+        <script type="text/javascript" src="js/vendor/jquery.sharrre-1.3.4.js"></script>
+  <!--      <script type="text/javascript" src="js/vendor/jquery.sharrre-1.3.4.min.js"></script> -->
         <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/social.js"></script>
 
         <script>
 
-                $('#socialbuttons').share({
-                    networks: ['facebook','googleplus','twitter','linkedin'],
-                    theme: 'square'
-                });
+                // $('#socialbuttons').share({
+                //     networks: ['facebook','googleplus','twitter','linkedin'],
+                //     theme: 'square'
+                // });
 
             var _gaq=[['_setAccount','UA-35135751-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
