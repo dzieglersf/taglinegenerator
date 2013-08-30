@@ -26,7 +26,8 @@
 	window.pulse_image = $('#generateDesigned');
 	
 	setupSelectionData();
-	
+	preloadImages();
+
 	function setupSelectionData() {
         $.ajax({
             url : "data/selections.csv",
@@ -192,27 +193,25 @@
 	       		iteration += 1;
 
 	       		if (iteration % 3 == 1)	{
-	       			$('#robot-image').attr("src", "../img/MoxyTR-robot-noarms-faceplate2.png");
+	       			$('#robot-image1').removeClass("visible").addClass("invisible");
+	       			$('#robot-image2').removeClass("invisible").addClass("visible");
+	       			$('#robot-image3').removeClass("visible").addClass("invisible");
 	       		}
 	       		else if (iteration % 3 == 2) {
-					$('#robot-image').attr("src", "../img/MoxyTR-robot-noarms-faceplate3.png");
+	       			$('#robot-image1').removeClass("visible").addClass("invisible");
+	       			$('#robot-image2').removeClass("visible").addClass("invisible");
+	       			$('#robot-image3').removeClass("invisible").addClass("visible");
 	       		}
 				else if (iteration % 3 == 0) {
-					$('#robot-image').attr("src", "../img/MoxyTR-robot-noarms-faceplate1.png");
+	       			$('#robot-image1').removeClass("invisible").addClass("visible");
+	       			$('#robot-image2').removeClass("visible").addClass("invisible");
+	       			$('#robot-image3').removeClass("visible").addClass("invisible");
 				}
 
-				if (iteration % 2 == 1)	{
-	       			$('#robot-arm.left-arm').attr("src", "../img/MoxyTR-robot-leftarm2.png");
-	       			$('#robot-arm.right-arm').attr("src", "../img/MoxyTR-robot-rightarm2.png");
-	       			$('#robot-arm.right-arm').toggleClass("on");
-	       			$('#robot-arm.left-arm').toggleClass("on");
-
-	       		}
-	       		else {
-	       			$('#robot-arm.left-arm').attr("src", "../img/MoxyTR-robot-leftarm1.png");
-	       			$('#robot-arm.right-arm').attr("src", "../img/MoxyTR-robot-rightarm1.png");
-	       		}
-
+				$('#right-arm1').toggleClass("visible").toggleClass("invisible");
+				$('#right-arm2').toggleClass("visible").toggleClass("invisible");
+				$('#left-arm1').toggleClass("visible").toggleClass("invisible");
+				$('#left-arm2').toggleClass("visible").toggleClass("invisible");
 
 				$('#wire1-on').toggleClass("visible").toggleClass("invisible");
 				$('#wire2-on').toggleClass("visible").toggleClass("invisible");

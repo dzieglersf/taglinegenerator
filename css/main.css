@@ -143,28 +143,43 @@ html, body
     z-index: 0;
 }
 
-#robot-image {
+.robot-image {
     position: absolute;
     left: 100px;
     width: 426px;
     height: 729px;
 }
 
-#robot-arm {
-    position: relative;
-    top: 220px;
-}
-
-#robot-arm.left-arm.on {
+#left-arm1 {
+    position: absolute;
     top: 215px;
+    left: 2px;
 }
 
-#robot-arm.right-arm {
-    left: 310px;
+#left-arm2 {    
+    position: absolute;
+    top: 215px;
+    left: 0px;
 }
 
-#robot-arm.right-arm.on {
-    left: 320px;
+#right-arm1 {
+    position: absolute;
+    top: 215px;
+    left: 470px;
+}
+
+#right-arm2 {    
+    position: absolute;
+    top: 215px;
+    left: 480px;
+}
+
+.arm.visible {
+    visibility: visible;
+}
+
+.arm.invisible {
+    visibility: hidden;
 }
 
 #share_page {
@@ -639,6 +654,16 @@ footer {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+/* iPhone */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) { 
+
+
+    div.instruction_text {
+        font-size: .85em;
+    }
+}
+
 
 /* iPad */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
