@@ -9,19 +9,24 @@
         <title>Moxy Creative's Tagline Generator</title>
         <meta name="viewport" content="width=device-width">
         <meta name="keywords" content="moxy creative, moxy creative agency, moxy creative san francisco, copy, creative copy, copywriting, writing, content, agency, advertising, public relations, editorial content, marketing copy, marketing strategy, project management, social media" />
-        <meta name="description" content="Moxy is a full-service copywriting and content agency specializing in advertising, public relations, editorial content, marketing copy, marketing strategy, project management, and social media." />
+        <meta name="description" content="Moxy Creative is a full-service copywriting and content agency specializing in advertising, public relations, editorial content, marketing copy, marketing strategy, project management, and social media." />
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/themes/alertify.core.css">
         <link rel="stylesheet" href="css/themes/alertify.default.css">
-        <link rel="stylesheet" href="css/jquery.share.css">
+     
+        <!-- googleplus -->
+        <link rel="canonical" href="http://www.taglinegenerator.com" />    
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js">{"parsetags": "explicit"}</script>
 
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+
+
        <div id="canvas">
 
             <img id="title" src="img/MoxyTR-TaglineRobot.png" />
@@ -31,13 +36,24 @@
                 <p class="left banner">Need a tagline or slogan?</p>
                 <p class="right banner">The robot can assist you.</p> 
             </div>
-            <div id="share_page" class="right">
-                <label>SHARE THIS PAGE</label>
-                <span id="twitter" data-url="http://sharrre.com/" data-text="share twitter" data-title="Tweet"></span>
-                <span id="facebook" data-url="http://sharrre.com/" data-text="share facebook" data-title="Like"></span>
-                <span id="googleplus" data-url="http://sharrre.com/" data-text="share googleplus" data-title="+1"></span>
-             </div>
 
+            <div>
+                <label id="share_page" >SHARE AND FOLLOW THIS PAGE</label>
+
+                <div id="facebook" class="fb-like" data-href="http://taglinegenerator.com" data-width="450" data-layout="box_count" data-show-faces="false" data-send="false">
+                </div>
+                                
+                <div id="linkedin">
+                    <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                    <script type="IN/Share" data-url="taglinegenerator.com" data-counter="top"></script>
+                </div>
+                <div id="twitter">
+                    <a id="twitter_button" href="https://twitter.com/thinkmoxy" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
+                </div>
+                <div id="googleplus"><g:plusone></g:plusone></div>
+
+            </div>
+            
             <div id="instructions" class="left image-box">
                 <img class="caption" src="img/MoxyTR-input-instructions.png" />
                 <img class="container" src="img/MoxyTR-box.png" />
@@ -97,19 +113,29 @@
         <script type="text/javascript" src="js/vendor/alertify.min.js"></script>
         <script type="text/javascript" src="js/vendor/underscore.js"></script> 
         <script type="text/javascript" src="js/vendor/underscore-min.map"></script> 
-      <!--  <script type="text/javascript" src="js/vendor/jquery.share.js"></script> -->
-       // <script type="text/javascript" src="js/vendor/jquery.sharrre-1.3.4.js"></script>
-         <script type="text/javascript" src="js/vendor/jquery.sharrre-1.3.4.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/social.js"></script>
 
+        <!-- googleplus -->
+        <script type="text/javascript">
+            gapi.plusone.render("googleplus", {"size": "tall"});
+        </script>
+
+        <!-- facebook -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348357788629907";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <!-- twitter -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
+
+        <!-- googlep analytics -->
         <script>
-
-                // $('#socialbuttons').share({
-                //     networks: ['facebook','googleplus','twitter','linkedin'],
-                //     theme: 'square'
-                // });
-
             var _gaq=[['_setAccount','UA-35135751-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src='//www.google-analytics.com/ga.js';

@@ -10,6 +10,7 @@
 		  return generateRandom();
 		});
 
+
 	var RESULT_LENGTH_THRESHOLD = 70;
 
 	var SETUP_ERROR_MESSAGE = "The robot has blown a fuse!  Our bad.  Please try again later!"
@@ -26,7 +27,6 @@
 	window.pulse_image = $('#generateDesigned');
 	
 	setupSelectionData();
-	preloadImages();
 
 	function setupSelectionData() {
         $.ajax({
