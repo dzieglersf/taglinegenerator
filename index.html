@@ -2,7 +2,10 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"
+  xmlns:og="http://ogp.me/ns#"> 
+<!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,6 +13,13 @@
         <meta name="viewport" content="width=device-width">
         <meta name="keywords" content="moxy creative, moxy creative agency, moxy creative san francisco, copy, creative copy, copywriting, writing, content, agency, advertising, public relations, editorial content, marketing copy, marketing strategy, project management, social media" />
         <meta name="description" content="Moxy Creative is a full-service copywriting and content agency specializing in advertising, public relations, editorial content, marketing copy, marketing strategy, project management, and social media." />
+ 
+        <meta property="og:title" content="Tagline Generator - Moxy Creative's Text-making Robot!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://taglinegenerator.com/" />
+        <meta property="og:image" content="http://moxycreative-taglinegenerator.s3-website-us-east-1.amazonaws.com/img/MoxyTR-Robot-full.png" />
+        <meta property="og:site_name" content="Tagline Generator" />
+        <meta property="og:description" content="The robot can make your tagline -- for free!"/>
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -17,7 +27,7 @@
         <link rel="stylesheet" href="css/themes/alertify.default.css">
      
         <!-- googleplus -->
-        <link rel="canonical" href="http://www.taglinegenerator.com" />    
+        <!-- <link rel="canonical" href="http://taglinegenerator.com" />     -->
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js">{"parsetags": "explicit"}</script>
 
     </head>
@@ -25,8 +35,6 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-
        <div id="canvas">
 
             <img id="title" src="img/MoxyTR-TaglineRobot.png" />
@@ -38,19 +46,18 @@
             </div>
 
             <div>
-                <label id="share_page" >SHARE AND FOLLOW THIS PAGE</label>
+                <div id="facebook" class="fb-like" data-href="http://taglinegenerator.com" data-width="450" data-layout="box_count" data-show-faces="false" data-send="false"></div>
 
-                <div id="facebook" class="fb-like" data-href="http://taglinegenerator.com" data-width="450" data-layout="box_count" data-show-faces="false" data-send="false">
-                </div>
-                                
                 <div id="linkedin">
                     <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-                    <script type="IN/Share" data-url="taglinegenerator.com" data-counter="top"></script>
+                    <script type="IN/Share" data-url="http://taglinegenerator.com" data-counter="top"></script>
                 </div>
+
+                <div id="googleplus"><g:plusone></g:plusone></div>
+
                 <div id="twitter">
                     <a id="twitter_button" href="https://twitter.com/thinkmoxy" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
                 </div>
-                <div id="googleplus"><g:plusone></g:plusone></div>
 
             </div>
             
@@ -87,8 +94,8 @@
 
             </div>
             <div id="share_result" class="right">
-               <!--  <div><label>SHARE YOUR RESULT</label></div> -->
-               <!--  <span id="socialbuttons"></span> -->
+               <!-- <div><label>SHARE YOUR RESULT</label></div> -->
+               <span id="socialbuttons"></span>
             </div>
 
             <div>
@@ -134,7 +141,7 @@
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
         </script>
 
-        <!-- googlep analytics -->
+        <!-- google analytics -->
         <script>
             var _gaq=[['_setAccount','UA-35135751-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
